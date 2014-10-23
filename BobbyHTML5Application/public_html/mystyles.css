@@ -1,0 +1,191 @@
+/*
+    File:  mystyles.css
+    91.461 Assignment: Creating Your First Web Page
+    Bobby T. Donald, Junior at UMass Lowell in Computer Science, 
+    Email: robert_donald1@student.uml.edu, File Created: 9/9/14
+    Description: This is my css styleguide that I created for this website.
+    Copyright (c) 2014 by Robert T. Donald.  All rights reserved.  May not be used
+    without authors written permission.
+*/
+/* centers items on page and changes background color to whitesmoke*/
+.page {
+    background-color:whitesmoke;
+    text-align: center;
+}
+
+/* centers title class */
+.title {
+    text-align: center;
+}
+
+/* Menu at the top of the screen*/
+.topmenu {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #3737D7;
+}
+
+/* styling for unordered list in topmenu*/
+.topmenu ul {
+    height: auto;
+    padding: 10px;
+}
+
+/* styling for list item in topmenu*/
+.topmenu li { 
+    display: inline; 
+    padding: 20px;
+}
+
+/* styling for list item in topmenu*/
+.topmenu a {
+    color: white
+}
+
+/*styling for links in topmenu */
+.topmenu a:hover {
+    color: cyan;
+}
+
+/*A colomn on the Left half of the page*/
+.colomnleft {
+    margin-top: 10px;
+    float: left;
+    padding: 10px;
+    width: 45%;
+}
+
+/*A colomn on the right half of the page*/
+.colomnright {
+    margin-top: 10px;
+    padding: 10px;
+    width: 45%;
+    float: right;
+}
+
+/*a black boarder to surround content*/
+.border {
+    margin: 50px;
+    width: auto ;
+    height: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+/*a black boarder to surround content, this border fills half the width of the screen*/
+.borderhalf {
+    width: 50% ;
+    height: auto;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+/*a white box used to put content in*/
+.content {
+    width: auto;
+    height: auto;
+    padding: 15px;
+    background-color: white;
+}
+
+/* all p's inside .content classes*/
+.content p {
+    text-align: left; 
+    margin: auto;
+    text-indent: 50px;
+}
+
+.centermenu {
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+}
+
+.centermenu ol {
+    list-style-type: none;
+    height: auto;
+    padding: 10px;
+}
+
+.centermenu li { 
+    padding: 10px;
+}
+
+.centermenu a {
+    color: black
+}
+
+.centermenu a:hover {
+    color: grey;
+}
+
+/* footer at the bottom of the screen*/
+.footer {
+    width:100%;
+    height:40px;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+/* makes links in footer black instead of default blue*/
+.footer a{
+    color: black;
+}
+
+/* footer at the bottom of the screen, not absolute because the absolute one 
+was being overwritten in assignment 5 when I was using css to dynamically add content*/
+.footerNotAbsolute {
+    width:100%;
+    height:40px;
+    bottom:0;
+    left:0;
+}
+
+/* makes links in footer black instead of default blue*/
+.footerNotAbsolute a{
+    color: black;
+}
+
+/*BELOW THIS LINE IS THE CSS FOR ASSIGNMENT 5*/
+/******************************************************/
+/* The formating for the title of the article */
+.titleArticle{
+    padding-bottom: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+}
+
+/* The formating for the author of the article */
+.authorArticle{
+    font-size: 14px;
+    text-align: left;
+}
+
+/* The formating for the date of the article */
+.dateArticle{
+    font-size: 14px;
+    text-align: left;
+}
+
+/* The formating for the content of the article */
+.articleContent{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* The formating for the lyrics */
+.lyrics{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+    width: 50em
+}

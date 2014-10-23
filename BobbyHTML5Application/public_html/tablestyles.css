@@ -1,0 +1,42 @@
+/*
+    File:  mystyles.css
+    91.461 Assignment: Creating Your First Web Page
+    Bobby T. Donald, Junior at UMass Lowell in Computer Science, 
+    Email: robert_donald1@student.uml.edu, File Created: 9/9/14
+    Description: This is my css styleguide that I created for this website.
+    Copyright (c) 2014 by Robert T. Donald.  All rights reserved.  May not be used
+    without authors written permission.
+*/
+
+.theTable {
+    color:black;
+    margin-left:auto; 
+    margin-right:auto; 
+}
+/* cell */
+.theTable tbody tr td {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+}
+/* border between cells*/
+.theTable, .theTable tbody tr th, .theTable tbody tr td {
+    border:2px solid black;
+    border-collapse: collapse;
+}
+/*first row*/
+.theTable tbody tr:first-child td {
+    background-color: black;
+    color: white;
+}
+/* first column */
+.theTable tbody tr td:first-child {
+    background-color: black;
+    color: white;
+}
+/* first cell */
+.theTable tbody tr:first-child td:first-child {
+    visibility: hidden;
+}
