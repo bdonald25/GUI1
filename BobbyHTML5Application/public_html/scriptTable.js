@@ -20,10 +20,7 @@ form.go.onclick = function () {
     if (anyErrors(rows, cols)) {
         return;
     }
-    //TODO add border
-    //<div class ="border">
-//             <div class ="content">
-//                <div class="centermenu">
+    
     var div = document.getElementById("result");
     
     // remove previous table if it exists
