@@ -20,7 +20,6 @@ form.go.onclick = function () {
     if (anyErrors(rows, cols)) {
         return;
     }
-    
     var div = document.getElementById("result");
     
     // remove previous table if it exists
