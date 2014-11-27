@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <!--
     File:  Assignment5.html
     91.461 Assignment: Formating Dynamic Text
@@ -13,59 +12,9 @@
     https://teaching.cs.uml.edu/~heines/91.461/91.461-2014-15f/461-assn/FormattingText-v04.jsp
     They have been modified to work with my website-->
     
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
 
 <!-- load the JSON file article.json -->
-<script type="text/javascript">
-  var story;
-
-  jQuery.ajax({
-    async: false,
-    dataType: "json",
-    url: "article.json" ,
-    success: function( data ) {
-      story = data ;
-    }
-  });
-
-  jQuery(document).ready( function() {
-    placeContent() ;
-  } ) ;
-</script>
-
-
-<!-- script to place JSON text in the placeholder on this page -->
-<script type="text/javascript">
-  // N.B.  This version *does* apply the CSS.
-  function placeContent() {
-    var strContent = "";
-
-    // create dynamic content from JSON
-    strContent += "<h1 class='titleArticle'>" + story.title + "</h1>" ;
-    strContent += "<h2 class='authorArticle'>" + story.author + "</h2>" ;
-    strContent += "<h3 class='dateArticle'>" + story.date + "</h2>" ;
-
-    strContent += "<ul class='lyrics'>"
-    // loop through all the paragraphs and sentences and add them to the page
-    // as unordered list elements
-    for ( var para = 0 ; para < story.text.paragraphs.length ; para++ ) {
-      strContent += "<li class= lyrics>" ;
-      for ( var sent = 0 ; sent < story.text.paragraphs[para].length ; sent++ ) {
-        strContent += story.text.paragraphs[para][sent] + "<br />" ;
-      }
-      strContent += "<br />" + "</li>" ;
-    }
-    strContent += "</ul>"
-
-    /* Read file info about image from article.json*/
-    strContent += "<img src='" + story.img.file + "' alt='" + story.img.alt + "'>" ;
-
-    // place dynamic content on page
-    // document.getElementById( "content" ).innerHTML = strContent ;
-    jQuery(".articleContent").html( strContent ) ;
-  }
-
-  </script>     
     
 <div class="page">
     <!-- Header titled Assignments-->
@@ -88,5 +37,6 @@
     <div class ="footerNotAbsolute">
         <a href="mailto:robert_donal1@student.uml.edu">Contact Me: robert_donald1@student.uml.edu</a> 
     </div>
-
 </div>
+
+<script src="javascript/loadtext.js"></script>

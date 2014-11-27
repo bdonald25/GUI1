@@ -1,10 +1,7 @@
 
 navigate();
 
-function navigate(){
-    //Reference to the "content" div.
-    var contentDiv = document.getElementById("content");
-    
+function navigate(){    
     //Isolate the fragment identifier using substr.
     //Removes the "#" character.
     fragmentId = location.hash.substr(1);
@@ -12,7 +9,8 @@ function navigate(){
     // Set the "content" div innerHTML based on the fragment identifier.
     getContent(fragmentId, function (content) {
         //adds content to contentDiv
-        contentDiv.innerHTML = content;
+        //contentDiv.innerHTML = content;
+        $('#content').html(content);
     });
   }
 

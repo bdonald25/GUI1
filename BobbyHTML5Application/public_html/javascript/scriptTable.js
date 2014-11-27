@@ -1,4 +1,5 @@
 var form = document.getElementById("theForm");
+
 form.go.onclick = function () {
     var row, col;
     var rLow = parseInt(form.rLow.value);

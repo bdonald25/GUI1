@@ -1,0 +1,52 @@
+<!--
+    File:  Assignment8.html
+    91.461 Assignment: Using the jQuery Validation Plugin and jQueryUI Tabbed Widget
+    Bobby T. Donald, Junior at UMass Lowell in Computer Science, 
+    Email: robert_donald1@student.uml.edu, File Created: 11/26/14
+    Description: This page has creates a multiplication table and puts it on another tab.
+    Copyright (c) 2014 by Robert T. Donald.  All rights reserved.  May not be used
+    without authors written permission.
+-->
+<div class="page">
+    <!-- Header titled Assignments-->
+    <div class="title" >
+        <h1>Assignment 8 (Using the jQuery Validation Plugin and jQueryUI Tabbed Widget)</h1>
+    </div>
+
+    <!--These are the tabs.-->
+     <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">Create a Table</a></li>
+            <li><a href="#tabs-2">Table 1</a></li>
+        </ul>
+         
+         <!-- Below here is where the content is for each of the tabs. --> 
+         
+        <!-- This tab is where we will make each of the tables. -->
+        <div id="tabs-1">
+            <!--Prompt for rows and colomns of table-->
+            <form action="" method="post" id="theForm" novalidate="novalidate"> 
+                Rows range from: <br/>
+                <input name="rLow" /> <br/>
+                to <br/>
+                <input name="rHigh" /> <br/> <br/>
+                Columns range from: <br/>
+                <input name="cLow" /> <br/>
+                to <br/>
+                <input name="cHigh" /> <br/>
+                <input type="button" name="go" value="Generate table" />
+                <br/><br/>
+            </form>
+        </div>
+         
+        <div id="tabs-2">
+            <!--This where the table will go-->
+            <div id="result"></div>
+        </div>
+         
+    </div>
+</div>
+
+<!--The JavaScript for building the table-->
+<script language="Javascript" type="text/javascript" src="javascript/scriptTableAssignment8.js"></script>
+
