@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <!--
     File:  Assignment6.html
     91.461 Assignment: Creating a Single-Page Navigation Interface
@@ -8,54 +7,28 @@
     Copyright (c) 2014 by Robert T. Donald.  All rights reserved.  May not be used
     without authors written permission.
 -->
-<html>
-    <head>
-        <!-- A link to css style sheet "mystyles.css" -->
-        <link rel="stylesheet" type="text/css" href="mystyles.css" />
-        <link rel="stylesheet" type="text/css" href="tablestyles.css" />
-        <title>Assignment6</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-          
-    <!-- The three scripts below are from
-    https://teaching.cs.uml.edu/~heines/91.461/91.461-2014-15f/461-assn/FormattingText-v04.jsp
-    They have been modified to work with my website-->
-    
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    
-    </head>
-    
-    <body class="page">
-        <!-- This is the menu at top of screen with links to Home and Assignments(this page) -->
-        <!-- This menu is on all of the pages -->
-        <div class="topmenu">
-            <ul>
-                <li><a href="FirstWebPage.html"> Home</a></li>
-                <li><a href="Assignments.html"> Assignments</a></li>
-            </ul>
-        </div>
-        
-        <!-- Header titled Assignments-->
-        <div class="title" >
-            <h1>Assignment No. 6 (Creating an Interactive Dynamic Table)</h1>
-        </div>
-        
-        <!--Prompt for rows and colomns of table-->
-        <form id="theForm">Rows ranging from
-            <input name="rLow" />through
-                <input name="rHigh" />
-                <br/>Columns ranging from
-                <input name="cLow" />through
-                <input name="cHigh" />
-                <br/><br/>
-            <input type="button" name="go" value="Generate table" />
+<div class="page">
+    <!-- Header titled Assignments-->
+    <div class="title" >
+        <h1>Assignment 6 (Formatting Dynamic Text)</h1>
+    </div>
+
+    <!--Prompt for rows and colomns of table-->
+    <form id="theForm">Rows ranging from
+        <input name="rLow" />through
+            <input name="rHigh" />
+            <br/>Columns ranging from
+            <input name="cLow" />through
+            <input name="cHigh" />
             <br/><br/>
-        </form>
+        <input type="button" name="go" value="Generate table" />
+        <br/><br/>
+    </form>
+    
+    <!--This where the table will go-->
+    <div id="result"></div>
+</div>
 
-        <!--This where the table will go-->
-        <div id="result"></div>
-        <script language="Javascript" type="text/javascript" src="scriptTable.js"></script>
+<!--The JavaScript for building the table-->
+<script language="Javascript" type="text/javascript" src="javascript/scriptTable.js"></script>
 
-    </body>
-</html>

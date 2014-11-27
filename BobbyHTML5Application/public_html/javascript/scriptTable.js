@@ -1,4 +1,5 @@
 var form = document.getElementById("theForm");
+
 form.go.onclick = function () {
     var row, col;
     var rLow = parseInt(form.rLow.value);
@@ -20,10 +21,6 @@ form.go.onclick = function () {
     if (anyErrors(rows, cols)) {
         return;
     }
-    //TODO add border
-    //<div class ="border">
-//             <div class ="content">
-//                <div class="centermenu">
     var div = document.getElementById("result");
     
     // remove previous table if it exists

@@ -1,64 +1,50 @@
-<!DOCTYPE html>
 <!--
-    File:  /~rdonald/91.461/FirstWebPage.html
-    91.461 Assignment: Creating Your First Web Page
+    File:  FirstWebPage.html
     Bobby T. Donald, Junior at UMass Lowell in Computer Science, 
-    Email: robert_donald1@student.uml.edu, File Created: 9/9/14
-    Description: This is my homepage. It gives some information about who I am
-    and it has a link to my assignments page.
+    Email: robert_donald1@student.uml.edu, File Created: 11/5/14
+    Description: My website is now a single page that uses java script to fill the 
+    content dynamically. This is the main page that is populated with content dynamically.
     Copyright (c) 2014 by Robert T. Donald.  All rights reserved.  May not be used
     without authors written permission.
 -->
 <html>
     <head>
-        <!-- Link to css style sheet "mystyles.css" -->
-        <link rel="stylesheet" type="text/css" href="mystyles.css" />
+        <!-- Link to css style sheet "mystyles.css, this is my web site's general style sheet." -->
+        <link rel="stylesheet" type="text/css" href="css/mystyles.css" />
+        <!-- Link to css style sheet "tablestyles.css" which is the style sheet for the
+        table in assignemnt 6.-->
+        <link rel="stylesheet" type="text/css" href="css/tablestyles.css" />
         
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+        
+         
+        
+         <!-- The JavaScript code for dynamically navigating. -->
+        <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script src="javascript/navigate.js"></script>
+
+        
+        <!-- These are needed for the jquery that I have used. -->
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>      
+
+
         <title>Bobby's Page</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     
     <body class="page">
-        <!-- Menu Bar at the top of screen, it has links to home and assignments-->
-        <!-- This same menu bar is in Assignments.html -->
+        <!-- Menu Bar at the top of screen, it has links to home page and assignments page.-->
         <div class="topmenu">
             <ul>
-                <li><a href="FirstWebPage.html"> Home</a></li>
-                <li><a href="Assignments.html"> Assignments</a></li>
+                <li><a href="#Home"> Home</a></li>
+                <li><a href="#Assignments"> Assignments</a></li>
             </ul>
         </div>
         
-        <!-- Header -->
-        <div class="title" >
-            <h1>Bobby's Web Page</h1>
-        </div>
-        
-        <!-- Paragraph about me on left side of screen, has a border -->
-        <div class="colomnleft">
-            <div class="border">
-                <div class="content">
-                    <p>
-                        My name is Bobby Donald. I am Junior in Computer Science 
-                        at UMass Lowell. I have no experience using HTML or CSS 
-                        prior to this class. I do, however, have experience working with C, C++,
-                        and Java. I currently work for Prof. Fred Martin in the ECG
-                        lab on the iSENSE Project. I work in the lab as an Android 
-                        developer.
-                    </p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Image of HTML logo on right side of screen-->
-        <div class="colomnright">
-             <img src="html.png" alt="HTML logo" style="width:50%;">
-        </div>
-        
-        <!-- Footer at the bottom of the page, contains a link to my email-->
-        <div class ="footer">
-            <a href="mailto:robert_donal1@student.uml.edu">Contact Me: robert_donald1@student.uml.edu</a> 
-        </div>
-        
+        <div id ="content"> </div> 
+       
     </body>
 </html>
