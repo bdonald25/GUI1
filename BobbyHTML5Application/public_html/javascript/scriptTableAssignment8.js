@@ -17,20 +17,6 @@ form.go.onclick = function () {
     var cLow = parseInt(form.cLow.value);
     var cHigh = parseInt(form.cHigh.value);
     
-    var div = document.getElementById("result");
-    
-    // Remove the previouse table if it exists.
-    if (div.firstChild !== null) {
-        div.removeChild(div.firstChild);
-    }
-
-    var border = document.createElement("div");
-    border.className = "border";
-    var content = document.createElement("div");
-    content.className = "content";
-    div.appendChild(border);
-    border.appendChild(content);
-    
     var tbl = document.createElement("table");
     tbl.className = "theTable";
 
@@ -51,6 +37,25 @@ form.go.onclick = function () {
         }
     }
     content.appendChild(tbl);
+        
+    var num_tabs = $("div#tabs ul li").length + 1;
+
+    // Add the tab.
+    $("div#tabs ul").append(
+        "<li><a href='#tab" + num_tabs + "'>Table " + (num_tabs - 1) + "</a></li>"
+    );
+
+    // Add the div that will contain the content for the tab.
+    $("div#tabs").append(
+        "<div id='tab" + num_tabs + "'>" + "</div>"
+    );
+    
+    // Add the table to the new tab.
+    $("div#tab" + num_tabs).append(tbl);
+
+    // Refresh the tab so the table will be visible.
+    $("div#tabs").tabs("refresh");
+     
 };
   
   $("#theForm").validate({
@@ -82,5 +87,3 @@ form.go.onclick = function () {
             cHigh: "Please enter a number"
         }
     });
-
-   
